@@ -1,5 +1,4 @@
 # Spirit-Airlines-Database
-### READ ME FILE ####
 Created by: Alan Xiao, Dillshini Hettige, Jacqueline Allex
 
 Hello! Welcome to our Airport Database, providing information and functionality about the aviation industry, primarily data from Spirit Airlines. There are 2 users: the customer and the DBA. The customer can view flights and purchase tickets, while the DBA has full control: they can perform CRUD operations as well as visualize the data in insightful ways. Frontend is written in R-Shiny, backend is written in MySQL.
