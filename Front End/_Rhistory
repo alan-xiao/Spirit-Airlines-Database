@@ -1,0 +1,512 @@
+prices_vals = as.numeric(substring(prices),2)
+# Question 4 - What is the average price of a food item?
+prices = xpathSApply(xmlDoc,'//price',xmlValue)
+prices_vals = as.numeric(substring(prices,2))
+mean_price = mean(prices_vals)
+mean_price
+# Analysing query1 dataframe - Calculating the mean price
+mean_Bookprice = mean(Query1.df[["price"]])
+mean_Bookprice
+# Question 4 - What is the average price of a food item?
+prices = xpathSApply(xmlDoc,'//price',xmlValue)
+prices_vals = as.numeric(substring(prices,2))
+mean_foodprice = mean(prices_vals)
+mean_foodprice
+# Question 4 - List the names of all food?
+food_names = xpathSApply(xmlDoc,'//name',xmlValue)
+# Question 4 - List the names of all food?
+food_names = xpathSApply(xmlDoc,'//name',xmlValue)
+food_names
+# Question 4 - List the names of all food?
+food_names = xpathSApply(xmlDoc,'/food/name',xmlValue)
+food_names
+# Question 4 - List the names of all food?
+food_names = xpathSApply(xmlDoc,'/breakfast/food/name',xmlValue)
+food_names
+# Question 4 - List the names of all food?
+food_names = xpathSApply(xmlDoc,'/breakfast_menu/food/name',xmlValue)
+food_names
+# Question 4 - How many food items are on the menu?
+Num_Fooditems = length(food_names)
+# Question 4 - How many food items are on the menu?
+Num_Fooditems = length(food_names)
+Num_Fooditems
+df.books = read.csv("Question1v1.csv")
+# Question 4 - Which food items have fewer than 1000 calories?
+lessthan_1000 = xpathSApply(xmlDoc,'//name[calories<1000]',xmlValue)
+# Question 4 - Which food items have fewer than 1000 calories?
+lessthan_1000 = xpathSApply(xmlDoc,'//food[calories<1000]/name',xmlValue)
+# Question 4 - Which food items have fewer than 1000 calories?
+lessthan_1000 = xpathSApply(xmlDoc,'/breakfast_menu/food[calories<1000]/name',xmlValue)
+# Question 4 - Which food items have fewer than 1000 calories?
+lessthan_1000 = xpathSApply(xmlDoc,'/breakfast_menu/food[calories<1000]/name',xmlValue)
+lessthan_1000
+# Installing packages
+#install.packages("RSQLite")
+#install.packages("XML")
+#install.packages("RCurl")
+library(RSQLite)
+library(XML)
+library(RCurl)
+# Connecting to the booksDB database created in SQLite
+db <- dbConnect(SQLite(), dbname="/Users/dillshinihettige/Documents/SQLite/booksDB.db")
+df.books = read.csv("Question1v1.csv")
+dbWriteTable(db, "Books", df.books, overwrite = TRUE)
+# Connecting to the booksDB database created in SQLite
+db <- dbConnect(SQLite(), dbname="/Users/dillshinihettige/Documents/SQLite/booksDB.db")
+dbWriteTable(db, "Books", df.books, overwrite = TRUE)
+# Question 3
+Query1.df = dbGetQuery(db, "SELECT title, author, price FROM Books")
+Query1.df
+dbReadTable(db, "Books")
+# Question 3
+Query1.df = dbGetQuery(db, "SELECT title, author, price FROM Books")
+Query1.df
+# Analysing query1 dataframe - Calculating the mean price
+mean_Bookprice = mean(Query1.df[["price"]])
+mean_Bookprice
+# Analysing query1 dataframe - Titles and authors of all books that cost less than $22
+Query1.df[Query1.df$price<22,c(1,2)]
+# Question 4 - XML connection setup
+xml.url <- "https://www.w3schools.com/xml/simple.xml"
+xData <- getURL(xml.url)
+xmlDoc = xmlParse(xData)
+r = xmlRoot(xmlDoc)
+xmlSize(r)
+# Question 4 - What is the average price of a food item?
+prices = xpathSApply(xmlDoc,'//price',xmlValue)
+prices_vals = as.numeric(substring(prices,2))
+mean_foodprice = mean(prices_vals)
+mean_foodprice
+# Question 4 - List the names of all food?
+food_names = xpathSApply(xmlDoc,'/breakfast_menu/food/name',xmlValue)
+food_names
+# Question 4 - How many food items are on the menu?
+Num_Fooditems = length(food_names)
+Num_Fooditems
+# Question 4 - Which food items have fewer than 1000 calories?
+lessthan_1000 = xpathSApply(xmlDoc,'/breakfast_menu/food[calories<1000]/name',xmlValue)
+lessthan_1000
+shiny::runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+input$columnName
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+?ifelse
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+conn <- dbConnect(MySQL(), user="root", password="Hettiged24",
+dbname='AirportDB', host='127.0.0.1')
+dbGetQuery("EXEC sp_fkeys Airport")
+dbGetQuery("EXEC sp_fkeys 'Airport'")
+dbGetQuery(conn,"EXEC sp_fkeys 'Airport'")
+dbGetQuery(conn,"EXEC sp_fkeys Airport")
+dbGetQuery(conn,"EXEC sp_fkeys 'Airport'")
+dbGetQuery(conn,"EXEC sp_fkeys 'Airport")
+dbGetQuery(conn,"'EXEC sp_fkeys 'Airport")
+dbGetQuery(conn,EXEC sp_fkeys 'Airport")
+dbGetQuery(conn,"'EXEC sp_fkeys 'Airport")
+dbGetQuery(conn,"EXEC sp_fkeys 'Airport")
+dbGetQuery(conn,"EXEC sp_fkeys 'Airport''")
+dbGetQuery(conn,"EXEC sp_fkeys 'Airport"')
+)
+"EXEC sp_fkeys 'Airport"'
+""
+"EXEC sp_fkeys 'Airport"
+"EXEC sp_fkeys 'Airport'"
+dbGetQuery(conn,"EXEC sp_fkeys 'Airport';")
+val = "airport"
+dbGetQuery(conn, paste0("EXEC sp_fkeys, val,";")
+dbGetQuery(conn, paste0("EXEC sp_fkeys", val,";")
+)
+dbGetQuery(conn, paste0("EXEC sp_fkeys ", val,";")
+)
+dbGetQuery(conn, paste0("EXEC sp_fkeys ", val,";"))
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/DynamicAppTest.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+val1 = "airportCity"
+dbGetQuery(conn, paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME =", val, "AND COLUMN_NAME =",val1,";"))
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME =", val, "AND COLUMN_NAME =",val1,";")
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ", val, "AND COLUMN_NAME = ",val1,";")
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ", val, " AND COLUMN_NAME = ",val1,";")
+dbGetQuery(conn, paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ",
+val, " AND COLUMN_NAME = ",val1,";"))
+conn <- dbConnect(MySQL(), user="root", password="Hettiged24",
+dbname='AirportDB', host='127.0.0.1')
+dbGetQuery(conn, paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ",
+val, " AND COLUMN_NAME = ",val1,";"))
+val = "Airport"
+dbGetQuery(conn, paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ",
+val, " AND COLUMN_NAME = ",val1,";"))
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ",
+val, " AND COLUMN_NAME = ",val1,";"
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ",
+val, " AND COLUMN_NAME = ",val1,";")
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ",
+val, " AND COLUMN_NAME = ",val1,";")
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ',
+val, "' AND COLUMN_NAME = '",val1,"' ;")
+dbGetQuery(conn, "SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Airport' AND COLUMN_NAME = 'airportCity';")
+hello = dbGetQuery(conn, "SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Airport' AND COLUMN_NAME = 'airportCity';")
+hello[1]
+hello[1,1]
+hello[1,1]
+cat('" "',val,'" "')
+cat(' "',val,'""')
+cat(' "',val,'')
+cat(' "',val,'"')
+cat('"',val,'"')
+val
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ',
+cat('" "',val,'" "'), "' AND COLUMN_NAME = '",val1,"' ;")
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '",
+cat('" "',val,'" "'), "' AND COLUMN_NAME = '",val1,"' ;")
+paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '",
+val, "' AND COLUMN_NAME = '",val1,"' ;")
+hello = dbGetQuery(conn, paste0(
+"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '",
+val, "' AND COLUMN_NAME = '",val1,"' ;"))
+hello
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+install.packages("hflights")
+if (!file.exists(path)) {
+message("Caching db at ", path)
+src <- src_sqlite(path, create = TRUE)
+copy_to(src, data, name, temporary = FALSE)
+} else {
+src <- src_sqlite(path)
+}
+install.packages(c("shinyjs", "sodium"))
+source('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/AuthenticationExamp.R')
+source('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/AuthenticationExamp.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+shiny::runApp('Google Drive New/My Drive/CS 3200/Project')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+library("shiny")
+library("shinydashboard")
+library("shinycssloaders")
+library("DT")
+install.packages("DT")
+library("DT")
+library("RMySQL")
+install.packages("RMySQL")
+library("RMySQL")
+install.packages("RMySQL")
+install.packages("RMySQL")
+install.packages("RMySQL")
+install.packages("DBI")
+install.packages("shinyTime")
+install.packages("shinyjs")
+install.packages("sodium")
+install.packages("sodium")
+install.packages("data.table")
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+install.packages("data.table")
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+install.packages("stringi")
+library(stringi)
+stri_rand_strings(1, 7, pattern = "[A-Za-z0-9]")
+stri_rand_strings(1, 7, pattern = "[A-F0-9]")
+stri_rand_strings(1, 3, pattern = "[A-F0-9]")
+random(n=1)*30
+random(1)
+random(2)
+rand(1)
+runif(1,1,30)
+round(runif(1,1,30))
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+library("data.table")
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runif(1,1,30)
+round(runif(1,1,30))
+stri_rand_strings(1, 1, pattern = "[A-F]")
+paste(round(runif(1,1,30)), stri_rand_strings(1, 1, pattern = "[A-F]"), sep = "")
+paste(round(runif(1,1,30)), stri_rand_strings(1, 1, pattern = "[A-F]"), sep = "")
+paste(round(runif(1,1,30)), stri_rand_strings(1, 1, pattern = "[A-F]"), sep = "")
+paste(round(runif(1,1,30)), stri_rand_strings(1, 1, pattern = "[A-F]"), sep = "")
+paste0("CALL passenger_purchase_ticket('","002","','","sdfg","','","dill@gmail.com",
+"','","22E","');")
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+dbGetQuery(conn, paste0("CALL find_destination_destination('","Atlanta","');"))
+conn <- dbConnect(MySQL(), user="root", password="Hettiged24",
+dbname='AirportDB', host='127.0.0.1')
+dbGetQuery(conn, paste0("CALL find_destination_destination('","Atlanta","');"))
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1"","','",234trfs,"','","dillshini@gmail.com",
+"','",12E,"');"))
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1"","','",234trfs,"','","dillshini@gmail.com",
+"','","12E"","');"))
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1"","','","234trfs"","','","dillshini@gmail.com",
+"','","12E"","');"))
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs"","','","dillshini@gmail.com",
+"','","12E"","');"))
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs,"','","dillshini@gmail.com",
+"','","12E","');"))
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com",
+"','","12E","');"))
+conn <- dbConnect(MySQL(), user="root", password="Hettiged24",
+dbname='AirportDB', host='127.0.0.1')
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com",
+"','","12E","');"))
+try(stop(dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com",
+"','","12E","');"))))
+iserror(dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com",
+"','","12E","');"))
+)
+is.error(dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com",
+"','","12E","');")))
+install.packages("BBmisc")
+requiredpackages = c("shiny", "shinydashboard", "shinycssloaders","DT","RMySQL","DBI",
+"shinyTime", "shinyjs", "sodium", "stringi","data.table",BBmisc)
+for (pkg in requiredpackages) {
+if (pkg %in% rownames(installed.packages()) == FALSE)
+{install.packages(pkg)}
+if (pkg %in% rownames(.packages()) == FALSE)
+{library(pkg, character.only = TRUE)}
+}
+library("BBmisc")
+is.error(dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com",
+"','","12E","');")))
+tryCatch(dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');")))
+tryCatch(dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');")), error=print("this is an error"))
+tryCatch(dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');")), error=1)
+tryCatch({
+bGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = function(e) print(e)
+)
+tryCatch({
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = function(e) print(e)
+)
+tryCatch({
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = "This is a error"
+)
+tryCatch({
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = 1
+)
+tryCatch({
+dbGetQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = TRUE
+)
+tryCatch({
+dbSendQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = "This is a error"
+)
+tryCatch({
+dbSendQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = function(e) print(e)
+)
+tryCatch({
+dbSendQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = function(e) NULL
+)
+tryCatch({
+dbSendQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","emmabest@gmail.com","','","12E","');"))
+},
+error = function(e) NULL
+)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+tryCatch({
+dbSendQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","emmabest@gmail.com","','","12E","');"))
+},
+error = function(e) NULL
+)
+tryCatch({
+dbSendQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = function(e) NULL
+)
+is.null(tryCatch({
+dbSendQuery(conn,paste0("CALL passenger_purchase_ticket('","1","','","234trfs","','","dillshini@gmail.com","','","12E","');"))
+},
+error = function(e) NULL
+))
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+isValidEmail(vdc)
+isValidEmail <- function(x) {
+grepl("\\<[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\>", as.character(x),
+ignore.case=TRUE)
+}
+isValidEmail(vdc)
+isValidEmail("vdc")
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+library(shiny); runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+lapply(dbListConnections(MySQL()), dbDisconnect)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv2.R')
+library(shiny); runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+options(warn=0)
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+dbGetQuery(conn, "SELECT email from passenger")
+conn <- do.call(DBI::dbConnect, args)
+on.exit(DBI::dbDisconnect(conn))
+dbGetQuery(conn, "SELECT email from passenger")
+emailTest = dillhettige@gmail.com
+emailTest = "dillhettige@gmail.com"
+allEmails = dbGetQuery(conn, "SELECT email from passenger")
+emailTest %in% allEmails
+View(args)
+View(allEmails)
+emailTest %in% allEmails$email
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+runApp('Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Front End/Appv3.R')
+setwd("~/Google Drive New/My Drive/CS 3200/CS 32😂😂/Project/Final Project Submission/Front End")
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+result = dbGetQuery(conn, paste0("CALL passenger_user_res('","UI6ZZOF","');"))
+conn <- do.call(DBI::dbConnect, args)
+on.exit(DBI::dbDisconnect(conn))
+result = dbGetQuery(conn, paste0("CALL passenger_user_res('","UI6ZZOF","');"))
+View(result)
+result = dbGetQuery(conn, paste0("CALL passenger_user_res('","PP545MD","');"))
+conn <- do.call(DBI::dbConnect, args)
+on.exit(DBI::dbDisconnect(conn))
+result = dbGetQuery(conn, paste0("CALL passenger_user_res('","PP545MD","');"))
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('AirportApp.R')
+runApp('~/Downloads/Front End/AirportApp.R')
+library(shiny); runApp('C:/Users/alanx/Downloads/AirportApp (1).R')
+runApp('C:/Users/alanx/Downloads/AirportApp (1).R')

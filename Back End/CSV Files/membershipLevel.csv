@@ -1,0 +1,4 @@
+membershipLevel,levelFeatures,numPoints
+Gold,"extraBaggage, loungePasses, extraGuests, upgradedSeating",50
+Silver ,"extraBaggage, loungePasses, upgradedSeating",30
+Bronze,extraBaggage,0
