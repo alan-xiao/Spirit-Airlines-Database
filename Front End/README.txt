@@ -1,8 +1,5 @@
-Provide a README section for creating and running the project. I need complete specifications for building your project on my computer. Specify all libraries, software, etc. needed to run the application. Specify expected installation directories. If you use a specific technology for the project, the technology’s download page must be listed
-
-
 ### READ ME FILE ####
-
+Created by: Alan Xiao, Dillshini Hettige, Jacqueline Allex
 
 Hello! Welcome to our Airport Database, providing information and functionality about the aviation industry.
 
